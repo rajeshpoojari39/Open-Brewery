@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(45deg, #dfeef5, #bbf1ff);
+  margin: 0 auto;
+}
+
+.main h2 {
+  font-family: "Bree Serif", serif;
+  font-size: 40px;
+  color: #023047;
+}
+
+/* Search Section */
+
+.search-section {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.search-section form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.search-section input[type="search"] {
+  font-family: "Bree Serif", serif;
+  width: 280px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  color: #023047;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+.search-section input[type="search"]:focus {
+  outline: none;
+}
+
+.search-section button {
+  font-family: "Bree Serif", serif;
+  font-size: 15px;
+  width: 80px;
+  height: 40px;
+  background-color: #023047;
+  color: #ffb703;
+  border-radius: 20px;
+  border: none;
+  transition: background-color 0.5s, color 0.5s, ease-in-out 0.5s;
+}
+
+.search-section button:hover {
+  font-weight: bold;
+  color: #023047;
+  background-color: #ffb703;
+}
+
+/* Brewery Results and Cards */
+
+.brewery-search-results {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.brewery-card {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin: 2% 0;
+  width: 400px;
+  height: 250px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  text-align: center;
+  background-color: #074469;
+  color: #ffb700;
+  border-radius: 10px;
+  transition: top 0.5s, right 0.5s, ease-in-out 0.5s;
+}
+
+.brewery-card:hover {
+  top: 5px;
+  left: 5px;
+}
+
+.brewery-card ul {
+  list-style-type: none;
+  padding: 0%;
+}
+
+.brewery-card li {
+  font-family: "Bree Serif", serif;
+  font-size: 16px;
+  margin: 10px 0;
+  height: 40px;
+}
+
+.no-result-found {
+  font-family: "Bree Serif", serif;
+  font-size: 30px;
+  color: #dd1c1a;
+  margin-top: 10%;
+  text-align: center;
+  animation: colorChange 2s infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    color: #dd1c1a;
+  }
+  25% {
+    color: #f94144;
+  }
+  50% {
+    color: #dd1c1a;
+  }
+  75% {
+    color: #f94144;
+  }
+  100% {
+    color: #dd1c1a;
+  }
+}
+
+/* Media queries */
+
+@media screen and (max-width: 900px) {
+  .brewery-card {
+    width: 345px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .search-section {
+    width: 355px;
+  }
+
+  .brewery-card {
+    width: 355px;
+  }
+
+  .search-section form {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .brewery-card {
+    width: 330px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .search-section {
+    width: 280px;
+  }
+
+  .search-section input[type="search"] {
+    width: 260px;
+  }
+
+  .brewery-card {
+    width: 255px;
+  }
+}
